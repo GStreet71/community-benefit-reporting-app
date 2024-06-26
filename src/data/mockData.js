@@ -431,165 +431,165 @@ export const mockPieData = [
 ];
 
 export const mockLineData = [
+  // {
+  //   id: "japan",
+  //   color: tokens("dark").greenAccent[500],
+  //   data: [
+  //     {
+  //       x: "plane",
+  //       y: 101,
+  //     },
+  //     {
+  //       x: "helicopter",
+  //       y: 75,
+  //     },
+  //     {
+  //       x: "boat",
+  //       y: 36,
+  //     },
+  //     {
+  //       x: "train",
+  //       y: 216,
+  //     },
+  //     {
+  //       x: "subway",
+  //       y: 35,
+  //     },
+  //     {
+  //       x: "bus",
+  //       y: 236,
+  //     },
+  //     {
+  //       x: "car",
+  //       y: 88,
+  //     },
+  //     {
+  //       x: "moto",
+  //       y: 232,
+  //     },
+  //     {
+  //       x: "bicycle",
+  //       y: 281,
+  //     },
+  //     {
+  //       x: "horse",
+  //       y: 1,
+  //     },
+  //     {
+  //       x: "skateboard",
+  //       y: 35,
+  //     },
+  //     {
+  //       x: "others",
+  //       y: 14,
+  //     },
+  //   ],
+  // },
   {
-    id: "japan",
-    color: tokens("dark").greenAccent[500],
-    data: [
-      {
-        x: "plane",
-        y: 101,
-      },
-      {
-        x: "helicopter",
-        y: 75,
-      },
-      {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
-        y: 216,
-      },
-      {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
-        y: 236,
-      },
-      {
-        x: "car",
-        y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
-    ],
-  },
-  {
-    id: "france",
+    id: "expense",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
-        y: 212,
+        x: "Jan",
+        y: 98774,
       },
       {
-        x: "helicopter",
-        y: 190,
+        x: "Feb",
+        y: 124841,
       },
       {
-        x: "boat",
-        y: 270,
+        x: "Mar",
+        y: 107227,
       },
       {
-        x: "train",
-        y: 9,
+        x: "Apr",
+        y: 98158,
       },
       {
-        x: "subway",
-        y: 75,
+        x: "May",
+        y: 79165,
       },
       {
-        x: "bus",
-        y: 175,
+        x: "Jun",
+        y: 113984,
       },
       {
-        x: "car",
-        y: 33,
+        x: "Jul",
+        y: 81348,
       },
       {
-        x: "moto",
-        y: 189,
+        x: "Aug",
+        y: 152508,
       },
       {
-        x: "bicycle",
-        y: 97,
+        x: "Sep",
+        y: 163771,
       },
       {
-        x: "horse",
-        y: 87,
+        x: "Oct",
+        y: 72864,
       },
       {
-        x: "skateboard",
-        y: 299,
+        x: "Nov",
+        y: 136833,
       },
       {
-        x: "others",
-        y: 251,
+        x: "Dec",
+        y: 95653,
       },
     ],
   },
   {
-    id: "us",
+    id: "ppl served",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
-        y: 191,
+        x: "Jan",
+        y: 6954,
       },
       {
-        x: "helicopter",
-        y: 136,
+        x: "Feb",
+        y: 10741,
       },
       {
-        x: "boat",
-        y: 91,
+        x: "Mar",
+        y: 6371,
       },
       {
-        x: "train",
-        y: 190,
+        x: "Apr",
+        y: 5671,
       },
       {
-        x: "subway",
-        y: 211,
+        x: "May",
+        y: 12841,
       },
       {
-        x: "bus",
-        y: 152,
+        x: "Jun",
+        y: 5891,
       },
       {
-        x: "car",
-        y: 189,
+        x: "Jul",
+        y: 5751,
       },
       {
-        x: "moto",
-        y: 152,
+        x: "Aug",
+        y: 7431,
       },
       {
-        x: "bicycle",
-        y: 8,
+        x: "Sep",
+        y: 10701,
       },
       {
-        x: "horse",
-        y: 197,
+        x: "Oct",
+        y: 10211,
       },
       {
-        x: "skateboard",
-        y: 107,
+        x: "Nov",
+        y: 7571,
       },
       {
-        x: "others",
-        y: 170,
+        x: "Dec",
+        y: 2231,
       },
     ],
   },
