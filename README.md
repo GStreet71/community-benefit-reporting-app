@@ -1,17 +1,16 @@
-#  <[APP TITLE HERE]>
-<status badge link>
-
-![Alt text](<copiedlink>)
-<br><br>
-
-React Application that generates cusomized workout regimen fit for a king.
-
-[![Live Demo](https://img.shields.io/badge/Live_Demo-blue)](<app url>) 
+# Community Impact Reporting App
+![Alt text](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white)
+![Alt text](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
+![Alt text](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white)
+![Alt text](<https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black>)
+![Alt text](https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Alt text](https://img.shields.io/badge/MUI-007FFF.svg?style=for-the-badge&logo=MUI&logoColor=white)
+![Alt text](https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white)
 <br><br>
 
 # Installation
 
-To get started with this Vite React project, follow these steps:
+To get started with this CRA React project, follow these steps:
 
 ### 1. Clone the Repository
 
