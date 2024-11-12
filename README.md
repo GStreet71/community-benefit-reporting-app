@@ -17,10 +17,10 @@ To get started with this Vite React project, follow these steps:
   First, you need to clone the repository to your local machine. You can do this using Git:
   
 ```bash
-    git clone <repository url>
+    git clone https://github.com/GHarrDev/community-benefit-reporting-app.git
 ```
 ```bash
-    cd <repository directory>
+    cd community-benefit-reporting-app
 ```
 <br>
 
