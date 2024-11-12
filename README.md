@@ -10,7 +10,7 @@
 
 # Installation
 
-To get started with this CRA React project, follow these steps:
+To get started with this Vite React project, follow these steps:
 
 ### 1. Clone the Repository
 
