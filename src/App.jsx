@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { AuthProvider, useAuth } from "./components/AuthContext"; // Import the useAuth hook
-import PrivateRoute from "./components/PrivateRoute"; // Ensure this imports correctly
+import { AuthProvider, useAuth } from "./components/AuthContext";
+import PrivateRoute from "./components/PrivateRoute";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
@@ -22,7 +22,7 @@ import Calendar from "./scenes/calendar/calendar";
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
-  const { isAuthenticated } = useAuth(); // Get authentication status from context
+  const { isAuthenticated } = useAuth();
 
   return (
     <AuthProvider>
@@ -34,10 +34,9 @@ function App() {
             <main className="content">
               {isAuthenticated && <Topbar setIsSidebar={setIsSidebar} />}
               <Routes>
-                {/* If the user is authenticated, navigates to dashboard or the last visited protected page */}
-                <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
+                <Route path="/login" element={<Login />} />
                 <Route element={<PrivateRoute />}>
-                  <Route path="/" element={<Dashboard />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/team" element={<Team />} />
                   <Route path="/contacts" element={<Contacts />} />
                   <Route path="/invoices" element={<Invoices />} />
@@ -48,7 +47,11 @@ function App() {
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/calendar" element={<Calendar />} />
                   <Route path="/geography" element={<Geography />} />
+                  {/* Catch-all route to redirect to dashboard */}
+                  <Route path="*" element={<Navigate to="/dashboard" />} />
                 </Route>
+                {/* Redirect to login for any unknown paths when not authenticated */}
+                <Route path="*" element={<Navigate to="/login" />} />
               </Routes>
             </main>
           </div>
