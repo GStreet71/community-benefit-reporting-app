@@ -31,11 +31,24 @@ const Login = () => {
   }, [username, password]);
 
   const handleLogin = () => {
-    if (username === 'admin' && password === 'password') {
+    const credentials = {
+      user: {
+        username: 'admin',
+        password: 'password',
+        fname: 'Austin',
+        lname: 'Strassle',
+        title: 'Community Benefits Manager',
+        role: 'admin',
+        photo: '../../public/assets/admin.png',
+        dept: 11
+      },
+    };
+
+    if (username === credentials.user.username && password === credentials.user.password) {
       setError(false);
       setHelperText('Login Successfully');
       console.log('Login Successfully');
-      login();
+      login(credentials.user);
       navigate('/dashboard');
     } else {
       setError(true);
@@ -130,7 +143,7 @@ const Login = () => {
         backgroundColor: colors.blueAccent[500],
         color: colors.primary[400],
           '&:hover': {
-            backgroundColor: colors.blueAccent[600], // Darker shade on hover
+            backgroundColor: colors.blueAccent[600],
           },
         }}
       >
