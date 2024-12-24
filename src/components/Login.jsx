@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -31,7 +31,7 @@ const Login = () => {
   }, [username, password]);
 
   const handleLogin = () => {
-    if (username === 'abc@email.com' && password === 'password') {
+    if (username === 'admin' && password === 'password') {
       setError(false);
       setHelperText('Login Successfully');
       console.log('Login Successfully');
@@ -47,7 +47,7 @@ const Login = () => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !isButtonDisabled) {
+    if (e.key === 'Enter') {
       handleLogin();
     }
   };
