@@ -8,11 +8,16 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import PopupState, {bindTrigger, bindMenu} from "material-ui-popup-state";
+import { useAuth } from "../../components/AuthContext";
 
 const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  const { logout } = useAuth();
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -43,9 +48,29 @@ const Topbar = () => {
         <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
-          <PersonOutlinedIcon />
-        </IconButton>
+        
+        {/* logout onClick */}
+        <PopupState variant="popover" pop upId="demo-popup-menu">
+          {(popupState) => (
+            <>
+              <IconButton {...bindTrigger(popupState)}>
+                <PersonOutlinedIcon />
+              </IconButton>
+              <Menu {...bindMenu(popupState)}>
+                <MenuItem onClick={popupState.close}>Profile</MenuItem>
+                <MenuItem onClick={popupState.close}>Settings</MenuItem>
+                <MenuItem 
+                  onClick={() => {
+                    logout();
+                    popupState.close();
+                  }}
+                >
+                  Logout
+                </MenuItem>
+              </Menu>
+            </>
+          )}
+        </PopupState>
       </Box>
     </Box>
   );
