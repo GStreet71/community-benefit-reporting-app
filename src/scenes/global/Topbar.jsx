@@ -42,15 +42,39 @@ const Topbar = () => {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        <IconButton>
+        
+        {/* Notifications popup <menu> */}
+        <PopupState variant="popover" pop upId="settings-popup-menu">
+          {(popupState) => (
+            <>
+        <IconButton {...bindTrigger(popupState)}>
           <NotificationsOutlinedIcon />
         </IconButton>
-        <IconButton>
-          <SettingsOutlinedIcon />
-        </IconButton>
+              <Menu {...bindMenu(popupState)}>
+                <MenuItem onClick={popupState.close}>No New Notifications</MenuItem>
+              </Menu>
+            </>
+          )}
+        </PopupState>
         
-        {/* logout onClick */}
-        <PopupState variant="popover" pop upId="demo-popup-menu">
+        {/* Settings popup meu */}
+        <PopupState variant="popover" pop upId="settings-popup-menu">
+          {(popupState) => (
+            <>
+              <IconButton {...bindTrigger(popupState)}>
+                <SettingsOutlinedIcon />
+              </IconButton>
+              <Menu {...bindMenu(popupState)}>
+                <MenuItem onClick={popupState.close}>User Settings</MenuItem>
+                <MenuItem onClick={popupState.close}>Account Settings</MenuItem>
+                <MenuItem onClick={popupState.close}>Permissions</MenuItem>
+              </Menu>
+            </>
+          )}
+        </PopupState>
+        
+        {/* User popup menu */}
+        <PopupState variant="popover" pop upId="user-popup-menu">
           {(popupState) => (
             <>
               <IconButton {...bindTrigger(popupState)}>
@@ -58,7 +82,8 @@ const Topbar = () => {
               </IconButton>
               <Menu {...bindMenu(popupState)}>
                 <MenuItem onClick={popupState.close}>Profile</MenuItem>
-                <MenuItem onClick={popupState.close}>Settings</MenuItem>
+                <MenuItem onClick={popupState.close}>Account</MenuItem>
+                {/* logout onClick */}
                 <MenuItem 
                   onClick={() => {
                     logout();
