@@ -31,12 +31,12 @@ Install the dependencies using one of the following package managers:
 #### Using npm
 
 ```bash
-    npm install
+    npm install --legacy-peer-deps
 ```
 #### Using yarn
 
 ```bash
-    yarn install
+    yarn install --legacy-peer-deps
 ```
 <br>
 
