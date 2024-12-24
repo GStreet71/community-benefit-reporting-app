@@ -75,10 +75,9 @@ const Login = () => {
       >
       <Card m="10px" sx={{ padding: '10px' }}>
         <CardHeader
-          title="Login"
+          title="Community Impact"
           sx={{
-            backgroundColor: colors.blueAccent[500],
-            color: colors.primary[900],
+            backgroundColor: colors.primary[400],
             textAlign: "center",
             padding: "20px"
           }}
