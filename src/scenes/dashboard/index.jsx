@@ -12,17 +12,20 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { useAuth } from '../../components/AuthContext';
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { user } = useAuth();
+
 
   return (
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="ADMIN HOME" subtitle="Welcome to your dashboard" />
-
+        <Header title={user ? `${user.role.toUpperCase()} HOME` : "HOME" } subtitle={user ? `Hi ${user.fname},  Welcome to your dashboard` : "Welcome to your dashboard"} />
+         {/* Display user's full name if available */}
         <Box>
           <Button
             sx={{
