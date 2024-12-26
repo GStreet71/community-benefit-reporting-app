@@ -43,8 +43,6 @@ const Sidebar = () => {
   const { user } = useAuth();
   const [selected, setSelected] = useState("Dashboard");
 
-  console.log(user); // Debug log
-
   return (
     <Box
       sx={{
@@ -84,7 +82,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h4" color={colors.grey[100]}>
-                  {user ? `${user.role}` : "Role"} {/* Display user's role if available */}
+                  {user ? `${user.role.toUpperCase()}` : "Role"} {/* Display user's role if available */}
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -100,7 +98,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={user.photo || `/assets/default.png`}
+                  src={user?.photo || `/assets/default.png`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>

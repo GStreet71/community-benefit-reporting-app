@@ -31,8 +31,8 @@ const Login = () => {
   }, [username, password]);
 
   const handleLogin = () => {
-    const credentials = {
-      user: {
+    const users = [
+      {
         username: 'admin',
         password: 'password',
         fname: 'Austin',
@@ -40,15 +40,41 @@ const Login = () => {
         title: 'Community Benefits Manager',
         role: 'admin',
         photo: '/assets/admin.png',
-        dept: 11
-      },
-    };
+        dept: 11,
+        event: null
+      },{
+        username: 'reporter',
+        password: 'password',
+        fname: 'Kayla',
+        lname: 'Harrier',
+        title: 'Pediatric Program Coordinator',
+        role: 'reporter',
+        photo: '/assets/reporter.png',
+        dept: 32,
+        event: ["Immunization Booster", "Flu Shot Clinic", "Blood Drive"]
+      },{
+        username: 'viewer',
+        password: 'password',
+        fname: 'Mark',
+        lname: 'Zuckerberg',
+        title: 'Volunteer',
+        role: 'viewer',
+        photo: '/assets/viewer.png',
+        dept: null,
+        event: ["Immunization Booster Drive"]
+      }
+    ];
 
-    if (username === credentials.user.username && password === credentials.user.password) {
+  const user = users.find(
+    (u) => u.username === username && u.password === password
+  );
+
+
+    if (username === user.username && password === user.password) {
       setError(false);
       setHelperText('Login Successfully');
       console.log('Login Successfully');
-      login(credentials.user);
+      login(user);
       navigate('/dashboard');
     } else {
       setError(true);
