@@ -39,7 +39,7 @@ const Login = () => {
         lname: 'Strassle',
         title: 'Community Benefits Manager',
         role: 'admin',
-        photo: '../../public/assets/admin.png',
+        photo: '/assets/admin.png',
         dept: 11
       },
     };
