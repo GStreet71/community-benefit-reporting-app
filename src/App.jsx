@@ -6,6 +6,7 @@ import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
@@ -35,6 +36,7 @@ function App() {
           <main className="content">
             {isAuthenticated && <Topbar setIsSidebar={setIsSidebar} />}
             <Routes>
+              <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route element={<PrivateRoute />}>
                 <Route path="/dashboard" element={<Dashboard />} />
