@@ -40,21 +40,22 @@ const Register = () => {
   const [roles, setRoles] = useState([]);
 
   useEffect(() => {
-    // Fetch departments and roles from the database
-    const fetchOptions = async () => {
+    // Fetch roles from the database
+    const fetchRoles = async () => {
       try {
-        const deptResponse = await fetch('/api/departments');
         const roleResponse = await fetch('/api/roles');
-        const deptData = await deptResponse.json();
+        if (!roleResponse.ok) {
+          throw new Error(`HTTP error! status: ${roleResponse.status}`);
+        }
         const roleData = await roleResponse.json();
-        setDepartments(deptData);
+        console.log('Fetched roles:', roleData); // Debugging line
         setRoles(roleData);
       } catch (error) {
-        console.error('Error fetching options:', error);
+        console.error('Error fetching roles:', error);
       }
     };
 
-    fetchOptions();
+    fetchRoles();
   }, []);
 
   const onChange = e => {
